@@ -1,0 +1,49 @@
+/* src/components/RegisterPage.css */
+
+.register-container {
+  max-width: 400px; /* Width of the form */
+  margin: 50px auto; /* Center alignment */
+  padding: 20px; /* Padding for form */
+  background-color: #fff; /* Background color */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.register-container h2 {
+  margin-bottom: 20px; /* Space below the title */
+  text-align: center; /* Center alignment */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"] {
+  width: 100%; /* Full width inputs */
+  padding: 10px; /* Input padding */
+  margin: 10px 0; /* Margin for spacing */
+  border-radius: 5px; /* Rounded corners */
+  border: 1px solid #ddd; /* Border color */
+  box-sizing: border-box; /* Box-sizing for consistent sizing */
+}
+
+button {
+  width: 100%; /* Full width button */
+  padding: 12px; /* Button padding */
+  margin-top: 15px; /* Margin at top */
+  border: none; /* Remove default border */
+  background-color: #007bff; /* Background color */
+  color: white; /* Text color */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Font size */
+}
+
+button:hover {
+  background-color: #0056b3; /* Button hover effect */
+}
+
+.error-message {
+  color: red; /* Error message color */
+  margin-bottom: 10px; /* Margin below error */
+  text-align: center; /* Center alignment */
+}

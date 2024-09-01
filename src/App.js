@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React, { useState } from 'react';
+import LoginPage from './Components/LoginPage';
+import RegisterPage from './Components/RegisterPage';
+import PatientDashboard from './Components/PatientDashboard';
+import './App.css'; // Import the CSS file for global styles
 
-function App() {
+const App = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isRegistering, setIsRegistering] = useState(false);
+
+  const handleRegisterSuccess = () => {
+    setIsRegistering(false); // Switch back to login after registration
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {!isLoggedIn ? (
+        isRegistering ? (
+          <RegisterPage onRegisterSuccess={handleRegisterSuccess} />
+        ) : (
+          <LoginPage onLogin={() => setIsLoggedIn(true)} />
+        )
+      ) : (
+        <PatientDashboard />
+      )}
+      {!isLoggedIn && !isRegistering && (
+        <button onClick={() => setIsRegistering(true)}>
+          Register Here
+        </button>
+      )}
     </div>
   );
-}
+};
 
 export default App;
