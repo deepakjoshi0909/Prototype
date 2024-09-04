@@ -1,0 +1,71 @@
+/* src/Components/HomePage.css */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #f5f5f5;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center; /* Center cards horizontally */
+  gap: 30px; /* Space between cards */
+}
+
+.card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 300px;
+  width: 100%;
+  flex: 1; /* Make cards flexible */
+}
+
+.card h2 {
+  font-size: 2rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  gap: 15px; /* Space between buttons */
+  justify-content: center; /* Center buttons horizontally */
+}
+
+.btn {
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: #fff;
+  border: none; /* Remove any borders */
+  outline: none; /* Remove default outline */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  text-decoration: none; /* Remove text decoration */
+  display: inline-block; /* Ensure button styles are applied */
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Remove any default styles from the Link component */
+a {
+  text-decoration: none; /* Remove underline from links */
+  border: none; /* Remove any default borders */
+  outline: none; /* Remove default focus outline */
+}
+  
